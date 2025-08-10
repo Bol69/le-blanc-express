@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" viewBox="0 0 640 200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2979FF"/>
+      <stop offset="1" stop-color="#4CAF50"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 96px 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif; fill: url(#g); letter-spacing: 1px; }
+      .tag { font: 500 20px 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif; fill: #495057; }
+    </style>
+  </defs>
+  <g transform="translate(30,42)">
+    <circle cx="40" cy="40" r="34" fill="none" stroke="url(#g)" stroke-width="8"/>
+    <line x1="70" y1="70" x2="102" y2="102" stroke="url(#g)" stroke-width="10" stroke-linecap="round"/>
+    <text x="40" y="48" text-anchor="middle" class="tag" style="font-size:34px; fill:#2979FF;">€</text>
+  </g>
+  <text x="150" y="100" class="title">Prixo</text>
+  <text x="150" y="140" class="tag">Trouvez le bon prix, à chaque fois.</text>
+</svg>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prixo — Trouvez le bon prix, à chaque fois.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="logo_prixo.svg" alt="Prixo logo">
+      </div>
+      <div class="actions">
+        <button id="theme-toggle" title="Thème">🌙</button>
+        <a class="primary" href="#">Télécharger l’extension</a>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Le comparateur malin pour la France</h1>
+      <p>Collez un lien produit ou tapez un nom. Prixo trouve instantanément les meilleures offres chez les marchands français.</p>
+      <div class="search">
+        <input id="q" placeholder="Ex. AirPods Pro, https://www.fnac.com/...">
+        <button id="search-btn">Rechercher</button>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="card">
+        <div class="label">Meilleur prix obtenu</div>
+        <div class="value" id="kpi-best">—</div>
+      </div>
+      <div class="card">
+        <div class="label">Économie potentielle</div>
+        <div class="value" id="kpi-saves">—</div>
+      </div>
+      <div class="card">
+        <div class="label">Marchands analysés</div>
+        <div class="value" id="kpi-shops">—</div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Comparaison instantanée</h3>
+        <p>Copiez-collez une URL ou un mot-clé — obtenez les meilleures offres en 1 clic.</p>
+      </div>
+      <div class="feature">
+        <h3>Alertes de prix</h3>
+        <p>Soyez notifié dès qu’un produit passe sous votre budget.</p>
+      </div>
+      <div class="feature">
+        <h3>Historique & fiabilité</h3>
+        <p>Suivi des prix & filtrage des vendeurs douteux pour acheter en confiance.</p>
+      </div>
+    </section>
+
+    <section class="results">
+      <h2>Résultats</h2>
+      <div id="results-list"></div>
+    </section>
+
+    <section style="margin-top:26px">
+      <div class="feature">
+        <h3>Aperçu extension navigateur</h3>
+        <p>Cliquez pour simuler l’overlay qui apparaît quand vous visitez une page produit.</p>
+        <p><button id="toggle-overlay">Afficher/Masquer l’overlay</button></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © Prixo — <a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Vie privée</a> · <a href="cgu.html">CGU</a> · <a href="scan.html">Scan code‑barres</a>
+    </footer>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <h4>Prixo — Meilleures offres</h4>
+    <div class="badge">Simulation extension</div>
+    <div style="margin-top:10px">
+      <div class="result-item" style="grid-template-columns:1fr 1fr;">
+        <div><strong>Meilleur prix</strong><br><small>Fnac</small></div>
+        <div class="price">339,00 €</div>
+      </div>
+      <div class="result-item" style="grid-template-columns:1fr 1fr;">
+        <div><strong>Alternative</strong><br><small>Amazon</small></div>
+        <div class="price">345,50 €</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Bandeau cookies">
+    <div class="cookie-content">
+      <p>Nous utilisons des cookies pour mesurer l’audience et améliorer votre expérience. </p>
+      <div class="cookie-actions">
+        <button id="cookie-accept">Tout accepter</button>
+        <button id="cookie-decline">Refuser</button>
+        <a href="politique-confidentialite.html">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

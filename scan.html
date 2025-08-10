@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scan code‑barres — Prixo</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="container">
+  <header class="header">
+    <div class="brand"><a href="index.html"><img src="logo_prixo.svg" alt="Prixo"></a></div>
+    <div class="actions"><button id="theme-toggle" title="Thème">🌙</button></div>
+  </header>
+  <section class="hero"><h1>Scan code‑barres</h1><p>Autorisez la caméra pour scanner un code‑barres ou un QR code (démo).</p></section>
+  <section class="results">
+    <video id="video" playsinline style="width:100%;border-radius:14px;background:#000"></video>
+    <p id="scan-status" class="footer">Initialisation…</p>
+    <div style="margin-top:10px"><a class="cta" href="index.html">Retour</a></div>
+  </section>
+</div>
+<script src="script.js"></script>
+<script>
+(async function(){
+  const status = document.getElementById('scan-status');
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});
+    const video = document.getElementById('video');
+    video.srcObject = stream;
+    await video.play();
+    status.textContent = 'Caméra active — pointez un code‑barres (simulation)';
+  }catch(e){
+    status.textContent = 'Caméra indisponible : chargez une image ou utilisez l’app mobile.';
+  }
+})();
+</script>
+</body></html>
