@@ -1,6 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#2979FF"/><stop offset="1" stop-color="#4CAF50"/></linearGradient></defs>
-  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#g)"/>
-  <text x="32" y="40" text-anchor="middle" font-family="Inter, Arial" font-weight="700" font-size="28" fill="white">P</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="marble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F2ED"/>
+      <stop offset="100%" stop-color="#EDE7D8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B6914"/>
+      <stop offset="30%" stop-color="#C9A24C"/>
+      <stop offset="60%" stop-color="#E8C97A"/>
+      <stop offset="100%" stop-color="#C9A24C"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="6" fill="url(#marble)"/>
+  <rect x="1" y="1" width="62" height="62" rx="5" fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+  <text x="32" y="24" font-family="Georgia, serif" font-size="10" font-weight="700" text-anchor="middle" fill="url(#gold)" letter-spacing="1">LBE</text>
+  <line x1="12" y1="29" x2="52" y2="29" stroke="url(#gold)" stroke-width="0.8" opacity="0.7"/>
+  <text x="32" y="42" font-family="Georgia, serif" font-size="7.5" font-weight="400" text-anchor="middle" fill="#4A3825" letter-spacing="0.5">URGENCE</text>
+  <text x="32" y="52" font-family="Georgia, serif" font-size="6" font-weight="400" text-anchor="middle" fill="#8B7060" letter-spacing="0.3">LYON 24H/24</text>
 </svg>

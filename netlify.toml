@@ -5,3 +5,57 @@
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Clean URLs — strip .html extension
+[[redirects]]
+  from = "/plomberie-lyon"
+  to = "/plomberie-lyon.html"
+  status = 200
+
+[[redirects]]
+  from = "/serrurerie-lyon"
+  to = "/serrurerie-lyon.html"
+  status = 200
+
+[[redirects]]
+  from = "/electricite-lyon"
+  to = "/electricite-lyon.html"
+  status = 200
+
+[[redirects]]
+  from = "/zones-intervention"
+  to = "/zones-intervention.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/mentions-legales.html"
+  status = 200
+
+[[redirects]]
+  from = "/politique-confidentialite"
+  to = "/politique-confidentialite.html"
+  status = 200
