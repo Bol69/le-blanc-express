@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  /* ── Contact Form ── */
+  /* ── Contact Form → WhatsApp ── */
   const form = document.getElementById('devis-form');
   if (form) {
     form.addEventListener('submit', e => {
@@ -52,15 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
         showNotif('Veuillez accepter la politique de confidentialité.', 'error');
         return;
       }
-      const btn = form.querySelector('[type="submit"]');
-      btn.textContent = 'Envoi en cours…';
-      btn.disabled = true;
-      setTimeout(() => {
-        showNotif('Votre demande a bien été envoyée. Nous vous rappelons très rapidement.', 'success');
-        form.reset();
-        btn.textContent = 'Envoyer ma demande';
-        btn.disabled = false;
-      }, 1200);
+      const get = name => (form.querySelector(`[name="${name}"]`) || {}).value || '';
+      const nom = get('nom');
+      const tel = get('telephone');
+      const service = get('service');
+      const ville = get('ville');
+      const message = get('message');
+      const text = [
+        '🔧 Demande de devis — LE BLANC EXPRESS',
+        `👤 Nom : ${nom}`,
+        `📞 Téléphone : ${tel}`,
+        service ? `🛠️ Service : ${service}` : '',
+        ville ? `📍 Ville : ${ville}` : '',
+        message ? `📝 Message : ${message}` : '',
+      ].filter(Boolean).join('\n');
+      window.open('https://wa.me/33622376787?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+      showNotif('Vous allez être redirigé vers WhatsApp pour envoyer votre demande.', 'success');
+      form.reset();
     });
   }
 

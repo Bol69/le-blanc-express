@@ -524,6 +524,12 @@ p, li { font-family: 'Lora', 'Cormorant Garamond', Georgia, serif; }
   border: 1px solid #333;
   box-shadow: 0 3px 12px rgba(0,0,0,0.3);
 }
+.hero-contact-btn.instagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+  border: 1px solid #c13584;
+  box-shadow: 0 3px 12px rgba(193,53,132,0.3);
+}
 .hero-contact-btn:hover { transform: translateY(-2px) scale(1.02); }
 
 /* ===================== SERVICE SECTION ===================== */
