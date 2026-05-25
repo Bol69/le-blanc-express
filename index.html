@@ -1,109 +1,567 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prixo — Trouvez le bon prix, à chaque fois.</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dépannage Urgence Lyon 24h/24 – Plombier, Serrurier, Électricien | LE BLANC EXPRESS</title>
+  <meta name="description" content="LE BLANC EXPRESS — Dépannage d'urgence plomberie, serrurerie et électricité à Lyon 24h/24 7j/7. Intervention rapide sur Lyon et la métropole lyonnaise. Appelez le 06 22 37 67 87."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.leblancexpress.fr/"/>
+  <meta property="og:title" content="Dépannage Urgence Lyon 24h/24 | LE BLANC EXPRESS"/>
+  <meta property="og:description" content="Plombier, serrurier et électricien d'urgence à Lyon. Intervention 24h/24 7j/7. Transparence de prix garantie."/>
+  <meta property="og:url" content="https://www.leblancexpress.fr/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EmergencyService",
+    "name": "LE BLANC EXPRESS",
+    "@id": "https://www.leblancexpress.fr/#business",
+    "url": "https://www.leblancexpress.fr",
+    "telephone": "+33622376787",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3255 Route de Strasbourg",
+      "addressLocality": "Rillieux-la-Pape",
+      "postalCode": "69140",
+      "addressRegion": "Auvergne-Rhône-Alpes",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.8175,
+      "longitude": 4.8975
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }],
+    "areaServed": [
+      {"@type":"City","name":"Lyon"},
+      {"@type":"City","name":"Rillieux-la-Pape"},
+      {"@type":"City","name":"Villeurbanne"},
+      {"@type":"City","name":"Caluire-et-Cuire"},
+      {"@type":"City","name":"Vaulx-en-Velin"},
+      {"@type":"City","name":"Bron"},
+      {"@type":"City","name":"Vénissieux"},
+      {"@type":"City","name":"Saint-Priest"},
+      {"@type":"City","name":"Décines-Charpieu"},
+      {"@type":"City","name":"Meyzieu"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services de dépannage",
+      "itemListElement": [
+        {"@type":"OfferCatalog","name":"Plomberie","itemListElement":[
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Dépannage fuite d'eau"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Débouchage canalisation"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Réparation chauffe-eau"}}
+        ]},
+        {"@type":"OfferCatalog","name":"Serrurerie","itemListElement":[
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ouverture de porte"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Changement de serrure"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Reproduction de clés"}}
+        ]},
+        {"@type":"OfferCatalog","name":"Électricité","itemListElement":[
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Dépannage électrique"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Réparation tableau électrique"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Installation prises"}}
+        ]}
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="brand">
-        <img src="logo_prixo.svg" alt="Prixo logo">
-      </div>
-      <div class="actions">
-        <button id="theme-toggle" title="Thème">🌙</button>
-        <a class="primary" href="#">Télécharger l’extension</a>
-        <a href="#">iOS</a>
-        <a href="#">Android</a>
-      </div>
-    </header>
 
-    <section class="hero">
-      <h1>Le comparateur malin pour la France</h1>
-      <p>Collez un lien produit ou tapez un nom. Prixo trouve instantanément les meilleures offres chez les marchands français.</p>
-      <div class="search">
-        <input id="q" placeholder="Ex. AirPods Pro, https://www.fnac.com/...">
-        <button id="search-btn">Rechercher</button>
-      </div>
-    </section>
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<nav class="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand" aria-label="LE BLANC EXPRESS — Accueil">
+      <span class="brand-main">LE BLANC EXPRESS</span>
+      <span class="brand-sub">Dépannage Urgence Lyon</span>
+    </a>
+    <ul class="navbar-nav" role="list">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="plomberie-lyon.html">Plomberie</a></li>
+      <li><a href="serrurerie-lyon.html">Serrurerie</a></li>
+      <li><a href="electricite-lyon.html">Électricité</a></li>
+      <li><a href="zones-intervention.html">Zones</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-cta">
+      <a href="tel:+33622376787" class="nav-phone" aria-label="Appeler le 06 22 37 67 87">
+        <span>📞</span> 06 22 37 67 87
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+  <a href="index.html">🏠 Accueil</a>
+  <a href="plomberie-lyon.html">🔧 Plomberie Lyon</a>
+  <a href="serrurerie-lyon.html">🔐 Serrurerie Lyon</a>
+  <a href="electricite-lyon.html">⚡ Électricité Lyon</a>
+  <a href="zones-intervention.html">📍 Zones d'intervention</a>
+  <a href="contact.html">✉️ Contact</a>
+  <a href="tel:+33622376787" style="color:var(--gold-dark);font-weight:700;">📞 06 22 37 67 87</a>
+</nav>
 
-    <section class="kpis">
-      <div class="card">
-        <div class="label">Meilleur prix obtenu</div>
-        <div class="value" id="kpi-best">—</div>
-      </div>
-      <div class="card">
-        <div class="label">Économie potentielle</div>
-        <div class="value" id="kpi-saves">—</div>
-      </div>
-      <div class="card">
-        <div class="label">Marchands analysés</div>
-        <div class="value" id="kpi-shops">—</div>
-      </div>
-    </section>
+<main>
 
-    <section class="features">
-      <div class="feature">
-        <h3>Comparaison instantanée</h3>
-        <p>Copiez-collez une URL ou un mot-clé — obtenez les meilleures offres en 1 clic.</p>
-      </div>
-      <div class="feature">
-        <h3>Alertes de prix</h3>
-        <p>Soyez notifié dès qu’un produit passe sous votre budget.</p>
-      </div>
-      <div class="feature">
-        <h3>Historique & fiabilité</h3>
-        <p>Suivi des prix & filtrage des vendeurs douteux pour acheter en confiance.</p>
-      </div>
-    </section>
+<!-- ══════════════════════════════════════════════════════
+     SECTION 1 — HERO  (fidèle visuel carte de visite)
+══════════════════════════════════════════════════════ -->
+<section class="hero marble-bg" id="hero" aria-label="Accueil LE BLANC EXPRESS">
 
-    <section class="results">
-      <h2>Résultats</h2>
-      <div id="results-list"></div>
-    </section>
+  <!-- Marble SVG veins overlay -->
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.55" preserveAspectRatio="xMidYMid slice" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-20 180 Q120 155 280 188 Q420 218 560 175 Q680 140 920 195" stroke="rgba(201,162,76,0.22)" stroke-width="1.3" fill="none"/>
+    <path d="M-20 310 Q90 292 200 325 Q340 362 485 315 Q625 272 920 345" stroke="rgba(201,162,76,0.14)" stroke-width="0.8" fill="none"/>
+    <path d="M110 0 Q135 200 112 400 Q90 600 125 800 Q155 950 135 1100" stroke="rgba(180,150,70,0.12)" stroke-width="0.7" fill="none"/>
+    <path d="M695 0 Q718 180 688 400 Q658 600 698 800 Q728 950 708 1100" stroke="rgba(201,162,76,0.10)" stroke-width="0.9" fill="none"/>
+    <path d="M-20 640 Q155 615 360 655 Q528 690 705 635 Q805 610 920 650" stroke="rgba(201,162,76,0.11)" stroke-width="0.6" fill="none"/>
+    <path d="M200 0 Q222 150 198 350 Q178 505 215 705 Q242 855 222 1100" stroke="rgba(220,195,120,0.07)" stroke-width="0.4" fill="none"/>
+    <path d="M450 -20 Q455 200 440 450 Q428 650 455 900 Q465 1000 460 1120" stroke="rgba(201,162,76,0.06)" stroke-width="0.35" fill="none"/>
+  </svg>
 
-    <section style="margin-top:26px">
-      <div class="feature">
-        <h3>Aperçu extension navigateur</h3>
-        <p>Cliquez pour simuler l’overlay qui apparaît quand vous visitez une page produit.</p>
-        <p><button id="toggle-overlay">Afficher/Masquer l’overlay</button></p>
-      </div>
-    </section>
+  <div style="position:relative;z-index:1;width:100%;max-width:680px;text-align:center;padding:0 1.5rem;">
 
-    <footer class="footer">
-      © Prixo — <a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Vie privée</a> · <a href="cgu.html">CGU</a> · <a href="scan.html">Scan code‑barres</a>
-    </footer>
+    <div class="animate-in">
+      <h1 class="hero-title">LE BLANC<br>EXPRESS</h1>
+    </div>
+
+    <div class="hero-divider animate-in animate-in-delay-1"></div>
+
+    <div class="hero-hours animate-in animate-in-delay-2">
+      <p class="hero-hours-item">
+        <strong>DÉPANNAGE 24H/24 – 7J/7</strong>
+      </p>
+      <p class="hero-hours-item">
+        INSTALLATION 7H – 18H DU LUNDI AU VENDREDI
+      </p>
+    </div>
+
+    <div class="hero-divider animate-in animate-in-delay-2"></div>
+
+    <nav class="hero-contacts animate-in animate-in-delay-3" aria-label="Contacts rapides">
+      <a href="tel:+33622376787" class="hero-contact-btn phone" aria-label="Appeler le 06 22 37 67 87">
+        <span style="font-size:1.3rem" aria-hidden="true">📞</span>
+        <span>06 22 37 67 87</span>
+      </a>
+      <a href="https://wa.me/33622376787" class="hero-contact-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 06 22 37 67 87">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>06 22 37 67 87</span>
+      </a>
+      <a href="https://www.snapchat.com/add/LBE693801" class="hero-contact-btn snapchat" target="_blank" rel="noopener noreferrer" aria-label="Snapchat LBE693801">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1a1a1a" d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.189.09.322.09.16-.016.3-.045.435-.045.538 0 1.178.181 1.178.896 0 .6-.498.967-1.005 1.197-.107.049-.2.09-.301.135-.57.26-1.139.682-1.139 1.409 0 .128.028.255.063.382.26.898 1.248 1.803 1.248 3.282 0 .567-.096 1.12-.314 1.649-.826 2.022-2.955 2.954-5.157 3.34-.112.022-.233.051-.335.217-.088.137-.176.361-.176.591 0 .136.033.263.077.374.076.18.3.522.3.852 0 .36-.225.645-.517.7-.27.052-.555.044-.832.044-.279 0-.581.037-.898.075-.319.034-.658.059-.985.059-.329 0-.66-.025-.987-.06-.315-.037-.62-.074-.895-.074-.277 0-.563.009-.832-.044-.293-.055-.518-.34-.518-.7 0-.33.225-.67.3-.852.044-.11.077-.238.077-.374 0-.23-.09-.454-.176-.591-.1-.165-.222-.195-.335-.217-2.201-.386-4.33-1.318-5.157-3.34-.218-.529-.314-1.082-.314-1.649 0-1.479.988-2.384 1.249-3.282.035-.127.06-.254.06-.382 0-.727-.569-1.149-1.139-1.409-.1-.045-.194-.086-.3-.135-.507-.23-1.006-.597-1.006-1.197 0-.715.64-.896 1.178-.896.134 0 .275.029.434.045.133 0 .248-.045.323-.09-.009-.165-.019-.33-.031-.51l-.002-.06c-.105-1.628-.232-3.654.298-4.847C7.849 1.069 11.206.793 12.206.793z"/></svg>
+        <span>LBE693801</span>
+      </a>
+      <a href="https://www.tiktok.com/@LBE693801" class="hero-contact-btn tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok LBE693801">
+        <svg width="20" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.02a8.19 8.19 0 004.79 1.54V7.12a4.85 4.85 0 01-1.02-.43z"/></svg>
+        <span>LBE693801</span>
+      </a>
+    </nav>
   </div>
 
-  <div id="overlay" class="overlay">
-    <h4>Prixo — Meilleures offres</h4>
-    <div class="badge">Simulation extension</div>
-    <div style="margin-top:10px">
-      <div class="result-item" style="grid-template-columns:1fr 1fr;">
-        <div><strong>Meilleur prix</strong><br><small>Fnac</small></div>
-        <div class="price">339,00 €</div>
+  <div class="gold-banner" style="width:100%;margin-top:auto;position:relative;z-index:1;">
+    <p>✦ &nbsp; INTERVENTION SUR LYON ET SES ALENTOURS &nbsp; ✦</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 2 — DÉPANNAGE PLOMBERIE
+══════════════════════════════════════════════════════ -->
+<section class="section marble-bg" id="plomberie" aria-labelledby="h2-plomberie">
+  <div class="section-inner">
+    <div class="service-block animate-on-scroll">
+
+      <div class="service-icon-area">
+        <div class="service-icon-ring" aria-hidden="true">
+          <span class="service-icon">🔧</span>
+        </div>
       </div>
-      <div class="result-item" style="grid-template-columns:1fr 1fr;">
-        <div><strong>Alternative</strong><br><small>Amazon</small></div>
-        <div class="price">345,50 €</div>
+
+      <div class="service-content">
+        <div class="gold-separator"><span>✦</span></div>
+        <h2 id="h2-plomberie" class="section-title title-3d">Dépannage<br>de Plomberie</h2>
+        <div class="gold-separator"><span>✦</span></div>
+        <p class="section-subtitle">Intervention urgente 24h/24 — 7j/7</p>
+        <ul class="service-list" aria-label="Services plomberie">
+          <li>Fuites d'eau et dégâts des eaux</li>
+          <li>Débouchage de canalisations</li>
+          <li>Réparation de robinetterie</li>
+          <li>Intervention de plomberie sur Lyon et ses alentours</li>
+        </ul>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem;">
+          <a href="tel:+33622376787" class="btn-gold">📞 Appeler maintenant</a>
+          <a href="plomberie-lyon.html" class="btn-gold-outline">En savoir plus</a>
+        </div>
       </div>
     </div>
   </div>
+  <div class="gold-banner">
+    <p>✦ &nbsp; Dépannage de plomberie 24h/24 — 7j/7 &nbsp; ✦</p>
+  </div>
+</section>
 
-  <script src="script.js"></script>
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Bandeau cookies">
-    <div class="cookie-content">
-      <p>Nous utilisons des cookies pour mesurer l’audience et améliorer votre expérience. </p>
-      <div class="cookie-actions">
-        <button id="cookie-accept">Tout accepter</button>
-        <button id="cookie-decline">Refuser</button>
-        <a href="politique-confidentialite.html">En savoir plus</a>
+<!-- ══════════════════════════════════════════════════════
+     SECTION 3 — URGENCE PLOMBERIE  (fidèle visuel 3)
+══════════════════════════════════════════════════════ -->
+<section class="urgence-section marble-dark" id="urgence-plomberie" aria-labelledby="h2-up">
+  <div class="urgence-inner animate-on-scroll">
+    <div class="gold-separator"><span>✦</span></div>
+    <h2 id="h2-up" class="urgence-title">
+      Une fuite d'eau&nbsp;?&nbsp; Un évier bouché&nbsp;?<br>
+      Une canalisation qui refoule&nbsp;?<br>
+      Un chauffe-eau défaillant&nbsp;?
+    </h2>
+    <div class="gold-line"></div>
+    <p class="urgence-text">
+      Nos plombiers diplômés et expérimentés sont prêts à <strong>intervenir d'urgence</strong>
+      avec une <strong>transparence de prix</strong> grâce à nos fiches tarifaires.
+    </p>
+    <div class="urgence-icons" aria-hidden="true">
+      <div class="urgence-icon-item"><span>🔩</span><span>Clé à molette</span></div>
+      <div class="urgence-icon-item"><span>🚿</span><span>Tuyauterie</span></div>
+      <div class="urgence-icon-item"><span>📋</span><span>Fiche tarifaire</span></div>
+    </div>
+    <a href="tel:+33622376787" class="btn-gold">📞 Demander un dépannage</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 4 — DÉPANNAGE SERRURERIE
+══════════════════════════════════════════════════════ -->
+<section class="section marble-bg" id="serrurerie" aria-labelledby="h2-serr">
+  <div class="section-inner">
+    <div class="service-block reverse animate-on-scroll">
+
+      <div class="service-icon-area">
+        <div class="service-icon-ring" aria-hidden="true">
+          <span class="service-icon">🔐</span>
+        </div>
+      </div>
+
+      <div class="service-content">
+        <div class="gold-separator"><span>✦</span></div>
+        <h2 id="h2-serr" class="section-title title-3d">Dépannage<br>de Serrurerie</h2>
+        <div class="gold-separator"><span>✦</span></div>
+        <p class="section-subtitle">Intervention urgente 24h/24 — 7j/7</p>
+        <ul class="service-list" aria-label="Services serrurerie">
+          <li>Ouverture de portes et de serrures</li>
+          <li>Changement de serrures</li>
+          <li>Clés cassées ou perdues</li>
+          <li>Dépannage de serrurerie sur Lyon et ses alentours</li>
+        </ul>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem;">
+          <a href="tel:+33622376787" class="btn-gold">📞 Appeler un serrurier</a>
+          <a href="serrurerie-lyon.html" class="btn-gold-outline">En savoir plus</a>
+        </div>
       </div>
     </div>
   </div>
+  <div class="gold-banner">
+    <p>✦ &nbsp; Dépannage de serrurerie 24h/24 — 7j/7 &nbsp; ✦</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 5 — URGENCE SERRURERIE  (fidèle visuel 2)
+══════════════════════════════════════════════════════ -->
+<section class="urgence-section marble-dark" id="urgence-serrurerie" aria-labelledby="h2-us">
+  <div class="urgence-inner animate-on-scroll">
+    <div class="gold-separator"><span>✦</span></div>
+    <h2 id="h2-us" class="urgence-title">
+      Une porte claquée&nbsp;?&nbsp; Une perte de clé&nbsp;?<br>
+      Un vandalisme&nbsp;?&nbsp; Un changement de serrure&nbsp;?
+    </h2>
+    <div class="gold-line"></div>
+    <p class="urgence-text">
+      Nos serruriers diplômés et expérimentés sont prêts à <strong>intervenir d'urgence</strong>
+      avec une <strong>transparence de prix</strong> grâce à nos fiches tarifaires.
+    </p>
+    <div class="urgence-icons" aria-hidden="true">
+      <div class="urgence-icon-item"><span>🔑</span><span>Cylindre de serrure</span></div>
+      <div class="urgence-icon-item"><span>🗝️</span><span>Clés dorées</span></div>
+      <div class="urgence-icon-item"><span>📋</span><span>Fiche tarifaire</span></div>
+    </div>
+    <a href="tel:+33622376787" class="btn-gold">📞 Intervention immédiate</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 6 — DÉPANNAGE ÉLECTRICITÉ
+══════════════════════════════════════════════════════ -->
+<section class="section marble-bg" id="electricite" aria-labelledby="h2-elec">
+  <div class="section-inner">
+    <div class="service-block animate-on-scroll">
+
+      <div class="service-icon-area">
+        <div class="service-icon-ring" aria-hidden="true">
+          <span class="service-icon">⚡</span>
+        </div>
+      </div>
+
+      <div class="service-content">
+        <div class="gold-separator"><span>✦</span></div>
+        <h2 id="h2-elec" class="section-title title-3d">Dépannage<br>d'Électricité</h2>
+        <div class="gold-separator"><span>✦</span></div>
+        <p class="section-subtitle">Intervention urgente 24h/24 — 7j/7</p>
+        <ul class="service-list" aria-label="Services électricité">
+          <li>Dépannage électrique</li>
+          <li>Défaut tableau électrique</li>
+          <li>Réparation prises et interrupteurs</li>
+          <li>Intervention d'électricité sur Lyon et ses alentours</li>
+        </ul>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem;">
+          <a href="tel:+33622376787" class="btn-gold">📞 Appeler un électricien</a>
+          <a href="electricite-lyon.html" class="btn-gold-outline">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gold-banner">
+    <p>✦ &nbsp; Dépannage d'électricité 24h/24 — 7j/7 &nbsp; ✦</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 7 — URGENCE ÉLECTRICITÉ  (fidèle visuel 4)
+══════════════════════════════════════════════════════ -->
+<section class="urgence-section marble-dark" id="urgence-electricite" aria-labelledby="h2-ue">
+  <div class="urgence-inner animate-on-scroll">
+    <div class="gold-separator"><span>✦</span></div>
+    <h2 id="h2-ue" class="urgence-title">
+      Une panne de courant&nbsp;?&nbsp; Une prise cassée&nbsp;?<br>
+      Un tableau électrique en défaut&nbsp;?<br>
+      Une installation électrique à revoir&nbsp;?
+    </h2>
+    <div class="gold-line"></div>
+    <p class="urgence-text">
+      Nos électriciens diplômés et expérimentés sont prêts à <strong>intervenir d'urgence</strong>
+      avec une <strong>transparence de prix</strong> grâce à nos fiches tarifaires.
+    </p>
+    <div class="urgence-icons" aria-hidden="true">
+      <div class="urgence-icon-item"><span>🔌</span><span>Multimètre</span></div>
+      <div class="urgence-icon-item"><span>🔋</span><span>Prise électrique</span></div>
+      <div class="urgence-icon-item"><span>📋</span><span>Fiche tarifaire</span></div>
+    </div>
+    <a href="tel:+33622376787" class="btn-gold">📞 Diagnostic rapide</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 8 — ZONES D'INTERVENTION
+══════════════════════════════════════════════════════ -->
+<section class="section marble-bg" id="zones" aria-labelledby="h2-zones">
+  <div class="section-inner animate-on-scroll">
+    <div class="gold-separator"><span>✦</span></div>
+    <h2 id="h2-zones" class="section-title title-3d">Nos Zones d'Intervention</h2>
+    <div class="gold-separator"><span>✦</span></div>
+    <p class="section-subtitle">Lyon et toute la métropole lyonnaise</p>
+
+    <div class="zones-grid" role="list">
+      <div class="zone-item" role="listitem">Lyon 1<sup>er</sup></div>
+      <div class="zone-item" role="listitem">Lyon 2<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Lyon 3<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Lyon 4<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Lyon 5<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Lyon 6<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Lyon 7<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Lyon 8<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Lyon 9<sup>e</sup></div>
+      <div class="zone-item" role="listitem">Villeurbanne</div>
+      <div class="zone-item" role="listitem">Rillieux-la-Pape</div>
+      <div class="zone-item" role="listitem">Caluire-et-Cuire</div>
+      <div class="zone-item" role="listitem">Vaulx-en-Velin</div>
+      <div class="zone-item" role="listitem">Bron</div>
+      <div class="zone-item" role="listitem">Vénissieux</div>
+      <div class="zone-item" role="listitem">Saint-Priest</div>
+      <div class="zone-item" role="listitem">Décines-Charpieu</div>
+      <div class="zone-item" role="listitem">Meyzieu</div>
+      <div class="zone-item" role="listitem">Sathonay-Camp</div>
+      <div class="zone-item" role="listitem">Fontaines-sur-Saône</div>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.341!2d4.897500!3d45.817500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c4f000000001%3A0x123456789abcdef!2s3255+Route+de+Strasbourg%2C+69140+Rillieux-la-Pape%2C+France!5e0!3m2!1sfr!2sfr!4v1716000000000!5m2!1sfr!2sfr"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Localisation LE BLANC EXPRESS — Rillieux-la-Pape, Lyon">
+      </iframe>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="zones-intervention.html" class="btn-gold-outline">Voir toutes nos zones</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 9 — CONTACT FINAL
+══════════════════════════════════════════════════════ -->
+<section class="section marble-dark" id="contact-section" aria-labelledby="h2-contact">
+  <div class="section-inner">
+    <div class="gold-separator"><span>✦</span></div>
+    <h2 id="h2-contact" class="section-title title-3d" style="text-align:center;">Contactez-Nous</h2>
+    <div class="gold-separator"><span>✦</span></div>
+
+    <div class="contact-grid animate-on-scroll">
+
+      <!-- CTA + infos -->
+      <div>
+        <div class="big-cta-area">
+          <p style="font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--brown-mid);">Urgence ? Appelez maintenant</p>
+          <a href="tel:+33622376787" class="big-phone-btn pulse-gold" aria-label="Appeler LE BLANC EXPRESS">
+            <span style="position:relative;z-index:1;font-size:1.3rem" aria-hidden="true">📞</span>
+            <span style="position:relative;z-index:1">APPELER 06 22 37 67 87</span>
+          </a>
+          <a href="https://wa.me/33622376787" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Contacter sur WhatsApp
+          </a>
+        </div>
+        <div class="contact-info" style="padding:0 1.5rem;">
+          <div class="contact-card">
+            <h3>Adresse</h3>
+            <p>3255 Route de Strasbourg<br>69140 Rillieux-la-Pape</p>
+          </div>
+          <div class="contact-card">
+            <h3>Horaires</h3>
+            <p><strong>Dépannage urgence :</strong> 24h/24 – 7j/7<br>
+               <strong>Installation :</strong> Lun–Ven, 7h–18h</p>
+          </div>
+          <div class="contact-card">
+            <h3>Réseaux sociaux</h3>
+            <p>
+              <a href="https://www.snapchat.com/add/LBE693801" target="_blank" rel="noopener">Snapchat : LBE693801</a><br>
+              <a href="https://www.tiktok.com/@LBE693801" target="_blank" rel="noopener">TikTok : LBE693801</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire devis -->
+      <form class="devis-form" id="devis-form" novalidate aria-label="Formulaire de devis gratuit">
+        <h2>Demande de devis gratuit</h2>
+        <div class="gold-line" style="margin-bottom:1.5rem;"></div>
+        <div class="form-group">
+          <label for="nom">Votre nom *</label>
+          <input type="text" id="nom" name="nom" placeholder="Ex : Jean Dupont" required autocomplete="name"/>
+        </div>
+        <div class="form-group">
+          <label for="telephone">Téléphone *</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" required autocomplete="tel"/>
+        </div>
+        <div class="form-group">
+          <label for="service">Type d'urgence *</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Choisissez un service…</option>
+            <option value="plomberie">🔧 Plomberie</option>
+            <option value="serrurerie">🔐 Serrurerie</option>
+            <option value="electricite">⚡ Électricité</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ville">Ville *</label>
+          <input type="text" id="ville" name="ville" placeholder="Ex : Lyon 3e" required autocomplete="address-level2"/>
+        </div>
+        <div class="form-group">
+          <label for="description">Description du problème</label>
+          <textarea id="description" name="description" rows="4" placeholder="Décrivez brièvement votre problème…"></textarea>
+        </div>
+        <div class="form-rgpd">
+          <input type="checkbox" id="rgpd" name="rgpd" required/>
+          <label for="rgpd">J'accepte que mes données soient utilisées pour traiter ma demande conformément à la
+            <a href="politique-confidentialite.html" style="color:var(--gold-dark);text-decoration:underline;">politique de confidentialité</a>.
+          </label>
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:1rem;">
+          Envoyer ma demande
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="gold-line-thick" style="margin-bottom:3rem;"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">LE BLANC EXPRESS</span>
+        <div class="gold-line" style="max-width:200px;margin:0.8rem 0;"></div>
+        <p>Spécialiste du dépannage d'urgence en plomberie, serrurerie et électricité à Lyon et sa métropole. Disponible 24h/24, 7j/7.</p>
+        <p style="margin-top:1rem;">
+          <a href="tel:+33622376787" style="color:var(--gold-light);font-weight:600;font-family:'Cinzel',serif;">📞 06 22 37 67 87</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="plomberie-lyon.html">Plomberie Lyon</a></li>
+          <li><a href="serrurerie-lyon.html">Serrurerie Lyon</a></li>
+          <li><a href="electricite-lyon.html">Électricité Lyon</a></li>
+          <li><a href="zones-intervention.html">Zones desservies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nous joindre</h4>
+        <ul>
+          <li><a href="tel:+33622376787">📞 06 22 37 67 87</a></li>
+          <li><a href="https://wa.me/33622376787" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.snapchat.com/add/LBE693801" target="_blank" rel="noopener">Snapchat</a></li>
+          <li><a href="https://www.tiktok.com/@LBE693801" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="gold-line-thick" style="margin-bottom:1.5rem;"></div>
+    <div class="footer-bottom">
+      <p>© 2025 LE BLANC EXPRESS — 3255 Route de Strasbourg, 69140 Rillieux-la-Pape</p>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ FLOATING BUTTONS ═══════════ -->
+<div class="floating-phone" role="complementary" aria-label="Contact rapide">
+  <a href="tel:+33622376787" class="float-btn phone-float pulse-gold" aria-label="Appeler LE BLANC EXPRESS">
+    <span aria-hidden="true">📞</span>
+    <span class="label">06 22 37 67 87</span>
+  </a>
+  <a href="https://wa.me/33622376787" class="float-btn wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp LE BLANC EXPRESS">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="label">WhatsApp</span>
+  </a>
+</div>
+
+<a href="#hero" class="scroll-top" aria-label="Retour en haut de page" title="Retour en haut">▲</a>
+
+<script src="js/main.js"></script>
 </body>
 </html>
